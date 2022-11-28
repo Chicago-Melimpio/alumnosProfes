@@ -15,22 +15,23 @@
 
   <body>
 
-    <input type="text" id="myInput" onkeyup="filtro()" placeholder="Busca una empresa" title="Type in a name">
+    <h1>Pepelu Muñoz</h1>
+
     <div id="wrapper">
       <table align='center' cellspacing=2 cellpadding=5 id="data_table" border=1>
         <tr>
+          <th>Día</th>
           <th>Actividades</th>
           <th>Observaciones</th>
           <th>Horas</th>
-          <th>Empresa</th>
           <th>Acciones</th>
         </tr>
 
         <tr id="row1">
-          <td id="actividades_row1">Ahmed</td>
-          <td id="observaciones_row1">Egypt</td>
-          <td id="horas_row1">26</td>
-          <td id="empresa_row1">26</td>
+          <td id="dias_row1">1</td>
+          <td id="actividades_row1">Trabajar</td>
+          <td id="observaciones_row1">Gratis</td>
+          <td id="horas_row1">24</td>
           <td>
             <input type="button" id="edit_button1" value="Edit" class="edit" onclick="edit_row('1')">
             <input type="button" id="save_button1" value="Save" class="save" onclick="save_row('1')" style="display:none">
@@ -38,10 +39,10 @@
           </td>
         </tr>
         <tr>
+          <td id="new_dias">2</td>
           <td><input type="text" id="new_actividades"></td>
           <td><input type="text" id="new_observaciones"></td>
           <td><input type="text" id="new_horas"></td>
-          <td><input type="text" id="new_empresa"></td>
           <td><input type="button" class="add" onclick="add_row();" value="Add Row"></td>
        </tr>
 
