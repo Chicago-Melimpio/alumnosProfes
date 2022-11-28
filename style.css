@@ -4,8 +4,20 @@
 }
 
 :root {
-  --gridMaxWidth: 40%;
+  --gridMaxWidth: 30rem;
   --gridWidth: 90%;
+  --anchorColor: inherit;
+  --anchorHoverColor: #174689;
+  --loginBorderRadius: 0.25em;
+  --loginHeaderBackgroundColor: #174689;
+  --bodyBackgroundColor: #eaeaea;
+  --bodyColor: #999;
+  --bodyFontFamily: 'Helvetica', 'Arial';
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+  --loginInputBorderRadius: 0.25em;
 }
 
 .grid {
@@ -29,16 +41,6 @@
   border-radius: 50%;
 }
 
-:root {
-  --bodyBackgroundColor: #eaeaea;
-  --bodyColor: #999;
-  --bodyFontFamily: 'Helvetica', 'Arial';
-  --bodyFontFamilyFallback: sans-serif;
-  --bodyFontSize: 0.875rem;
-  --bodyFontWeight: 400;
-  --bodyLineHeight: 1.5;
-}
-
 *,
 *::before,
 *::after {
@@ -60,11 +62,6 @@ body {
   min-block-size: 100vh;
 }
 
-:root {
-  --anchorColor: inherit;
-  --anchorHoverColor: #1dabb8;
-}
-
 a {
   color: var(--anchorColor);
   text-decoration: none;
@@ -82,13 +79,6 @@ input[type='button'] {
 .form input[type='email'],
 .form input[type='password'] {
   inline-size: 100%;
-}
-
-:root {
-  --loginBorderRadius: 0.25em;
-  --loginHeaderBackgroundColor: #198d98;
-
-  --loginInputBorderRadius: 0.25em;
 }
 
 .login__header {
@@ -146,7 +136,7 @@ input[type='button'] {
 
 .login input[type='button'] {
   display: none;
-  background-color: #1dabb8;
+  background-color: #174689;
   border-radius: var(--loginInputBorderRadius);
   color: #fff;
   font-weight: 700;
