@@ -108,6 +108,10 @@ tr:hover{
     background-color: var(--pc);
     color: var(--hv);
 }
+td{
+    line-break: anywhere;
+    word-break: normal;
+}
 .edit:hover{
     background-color: var(--hv);
 }
