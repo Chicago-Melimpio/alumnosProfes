@@ -11,7 +11,7 @@ function edit_row(no) {
 
     actividades.innerHTML = "<input type='text' id='actividades_text" + no + "' value='" + actividades_data + "'>";
     observaciones.innerHTML = "<input type='text' id='observaciones_text" + no + "' value='" + observaciones_data + "'>";
-    horas.innerHTML = "<input type='text' id='horas_text" + no + "' value='" + horas_data + "'>";
+    horas.innerHTML = "<input type='number' id='horas_text" + no + "' value='" + horas_data + "'>";
 
 }
 

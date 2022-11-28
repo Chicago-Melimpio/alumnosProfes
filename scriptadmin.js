@@ -21,34 +21,71 @@ function filtro() {
 
 //Editar
 function edit_row(no) {
-    document.getElementById("edit_button" + no).style.display = "none";
-    document.getElementById("save_button" + no).style.display = "inline";
-    var id = document.getElementById("id_row" + no);
-    var producto = document.getElementById("producto_row" + no);
-    var precio = document.getElementById("precio_row" + no);
-    var cantidadDisponible = document.getElementById("cantidadDisponible_row" + no)
-    var id_data = id.innerHTML;
-    var producto_data = producto.innerHTML;
-    var precio_data = precio.innerHTML;
-    var cantidadDisponible_data = cantidadDisponible.innerHTML;
-    id.innerHTML = "<input type='text' id='id_text" + no + "' value='" + id_data + "'>";
-    producto.innerHTML = "<input type='text' id='producto_text" + no + "' value='" + producto_data + "'>";
-    precio.innerHTML = "<input type='text' id='precio_text" + no + "' value='" + precio_data + "'>";
-    cantidadDisponible.innerHTML = "<input type='text' id='cantidadDisponible_text" + no + "' value='" + cantidadDisponible_data + "'>";
+  document.getElementById("edit_button" + no).style.display = "none";
+  document.getElementById("save_button" + no).style.display = "inline";
+  var nombrehtml = document.getElementById("Nombre" + no);
+  var apellidoshtml = document.getElementById("Apellidos" + no);
+  var contraseñahtml = document.getElementById("Contraseña" + no);
+  var dnihtml = document.getElementById("DNI" + no);
+  var nacihtml = document.getElementById("Nacimiento" + no);
+  var emailhtml = document.getElementById("Email" + no);
+  var telhtml = document.getElementById("Telefono" + no);
+  var emphtml = document.getElementById("Empresa" + no);
+  var dualhtml = document.getElementById("Dual" + no);
+  var fcthtml = document.getElementById("FCT" + no);
+  var obshtml = document.getElementById("Observaciones" + no);
+  var nombre = nombrehtml.innerHTML;
+  var apellidos = apellidoshtml.innerHTML;
+  var contra = contraseñahtml.innerHTML;
+  var dni = dnihtml.innerHTML;
+  var naci = nacihtml.innerHTML;
+  var email = emailhtml.innerHTML;
+  var tel = telhtml.innerHTML;
+  var emp = emphtml.innerHTML;
+  var dual = dualhtml.innerHTML;
+  var fct = fcthtml.innerHTML;
+  var obs = obshtml.innerHTML;
+  nombrehtml.innerHTML = "<input type='text' id='nombre_text" + no + "' value='" + nombre + "'>";
+  apellidoshtml.innerHTML = "<input type='text' id='apellidos_text" + no + "' value='" + apellidos + "'>";
+  contraseñahtml.innerHTML = "<input type='text' id='contraseña_text" + no + "' value='" + contra + "'>";
+  dnihtml.innerHTML = "<input type='text' id='dni_text" + no + "' value='" + dni + "'>";
+  nacihtml.innerHTML = "<input type='text' id='nacimiento_text" + no + "' value='" + naci + "'>";
+  emailhtml.innerHTML = "<input type='text' id='email_text" + no + "' value='" + email + "'>";
+  telhtml.innerHTML = "<input type='text' id='telefono_text" + no + "' value='" + tel + "'>";
+  emphtml.innerHTML = "<input type='text' id='empresa_text" + no + "' value='" + emp + "'>";
+  dualhtml.innerHTML = "<input type='text' id='dual_text" + no + "' value='" + dual + "'>";
+  fcthtml.innerHTML = "<input type='text' id='fct_text" + no + "' value='" + fct + "'>";
+  obshtml.innerHTML = "<input type='text' id='observaciones_text" + no + "' value='" + obs + "'>";
 }
 
 //Guardar
 function save_row(no) {
-    var id_val = document.getElementById("id_text" + no).value;
-    var producto_val = document.getElementById("producto_text" + no).value;
-    var precio_val = document.getElementById("precio_text" + no).value;
-    var cantidadDisponible_val = document.getElementById("cantidadDisponible_text" + no).value;
-    document.getElementById("id_row" + no).innerHTML = id_val;
-    document.getElementById("producto_row" + no).innerHTML = producto_val;
-    document.getElementById("precio_row" + no).innerHTML = precio_val;
-    document.getElementById("cantidadDisponible_row" + no).innerHTML = cantidadDisponible_val;
-    document.getElementById("edit_button" + no).style.display = "inline";
-    document.getElementById("save_button" + no).style.display = "none";
+  var nombrehtml = document.getElementById("nombre_text" + no).value;
+  var apellidoshtml = document.getElementById("apellidos_text" + no).value;
+  var contraseñahtml = document.getElementById("contraseña_text" + no).value;
+  var dnihtml = document.getElementById("dni_text" + no).value;
+  var nacihtml = document.getElementById("nacimiento_text" + no).value;
+  var emailhtml = document.getElementById("email_text" + no).value;
+  var telhtml = document.getElementById("telefono_text" + no).value;
+  var emphtml = document.getElementById("empresa_text" + no).value;
+  var dualhtml = document.getElementById("dual_text" + no).value;
+  var fcthtml = document.getElementById("fct_text" + no).value;
+  var obshtml = document.getElementById("observaciones_text" + no).value;
+
+  document.getElementById("Nombre" + no).innerHTML = nombrehtml;
+  document.getElementById("Apellidos" + no).innerHTML = apellidoshtml;
+  document.getElementById("Contraseña" + no).innerHTML = contraseñahtml;
+  document.getElementById("DNI" + no).innerHTML = dnihtml;
+  document.getElementById("Nacimiento" + no).innerHTML = nacihtml;
+  document.getElementById("Email" + no).innerHTML = emailhtml;
+  document.getElementById("Telefono" + no).innerHTML = telhtml;
+  document.getElementById("Empresa" + no).innerHTML = emphtml;
+  document.getElementById("Dual" + no).innerHTML = dualhtml;
+  document.getElementById("FCT" + no).innerHTML = fcthtml;
+  document.getElementById("Observaciones" + no).innerHTML = obshtml;
+
+  document.getElementById("edit_button" + no).style.display = "inline";
+  document.getElementById("save_button" + no).style.display = "none";
 }
 
 //Borrar
@@ -58,17 +95,51 @@ function delete_row(no) {
 
 //Añadir
 function add_row() {
-    var new_id = document.getElementById("new_id").value;
-    var new_producto = document.getElementById("new_producto").value;
-    var new_precio = document.getElementById("new_precio").value;
-    var new_cantidadDisponible = document.getElementById("new_cantidadDisponible").value;
-    var table = document.getElementById("data_table");
-    var table_len = (table.rows.length) - 1;
-    var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='id_row" + table_len + "'>" + new_id + "</td><td id='producto_row" + table_len + "'>" + new_producto + "</td><td id='precio_row" + table_len + "'>" + new_precio + "</td><td id='cantidadDisponible_row" + table_len + "'>" + new_cantidadDisponible + "</td><td><input type='button' id='edit_button" + table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len + "' value='💾' class='save' onclick='save_row(" + table_len + ")'> <input type='button' value='🗑️' class='delete' onclick='delete_row(" + table_len + ")'></td></tr>";
-    document.getElementById("new_id").value = "";
-    document.getElementById("new_producto").value = "";
-    document.getElementById("new_precio").value = "";
-    document.getElementById("new_cantidadDisponible").value = "";
+  var new_nombre = document.getElementById("new_nombre").value;
+  var new_apellidos = document.getElementById("new_apellidos").value;
+  var new_contraseña = document.getElementById("new_contraseña").value;
+  var new_dni = document.getElementById("new_dni").value;
+  var new_nacimiento = document.getElementById("new_nacimiento").value;
+  var new_email = document.getElementById("new_email").value;
+  var new_telefono = document.getElementById("new_telefono").value;
+  var new_emp = document.getElementById("new_empresa").value;
+  var new_dual = document.getElementById("new_dual").value;
+  var new_fct = document.getElementById("new_fct").value;
+  var new_obs = document.getElementById("new_observaciones").value;
+
+  var table = document.getElementById("data_table");
+  var table_len = (table.rows.length)-1;
+  table.insertRow(table_len).outerHTML = 
+  "<tr id='row" + table_len + "'>"+
+  "<td id='Nombre" +table_len+"'>"+new_nombre+"</td>"+
+  "<td id='Apellidos" +table_len+"'>"+new_apellidos+"</td>"+
+  "<td id='Contraseña" +table_len+"'>"+new_contraseña+"</td>"+
+  "<td id='DNI" +table_len+"'>"+new_dni+"</td>"+
+  "<td id='Nacimiento" +table_len+"'>"+new_nacimiento+"</td>"+
+  "<td id='Email" +table_len+"'>"+new_email+"</td>"+
+  "<td id='Telefono" +table_len+"'>"+new_telefono+"</td>"+
+  "<td id='Empresa" +table_len+"'>"+new_emp+"</td>"+
+  "<td id='Dual" +table_len+"'>"+new_dual+"</td>"+
+  "<td id='FCT" +table_len+"'>"+new_fct+"</td>"+
+  "<td id='Observaciones" +table_len+"'>"+new_obs+"</td>"+
+  "<td><input type='button' id='edit_button" + table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'>"+
+   "<input type='button' id='save_button" + table_len + "' value='💾' class='save' onclick='save_row(" + table_len + ")'>"+
+   "<input type='button' value='🗑️' class='delete' onclick='delete_row(" + table_len + ")'>"+
+   "<input type='button' value='Ver alumno' class='ver'></td></tr>";
+  
+  document.getElementById("new_nombre").value = "";
+  document.getElementById("new_apellidos").value = "";
+  document.getElementById("new_contraseña").value = "";
+  document.getElementById("new_dni").value = "";
+  document.getElementById("new_nacimiento").value = "";
+  document.getElementById("new_email").value = "";
+  document.getElementById("new_telefono").value = "";
+  document.getElementById("new_empresa").value = "";
+  document.getElementById("new_dual").value = "";
+  document.getElementById("new_fct").value = "";
+  document.getElementById("new_observaciones").value = "";
+  
+  actualizar();
 }
 
 
