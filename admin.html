@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Table</title>
+  <link rel="stylesheet" href="./styleadmin.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+  <header class="header">
+
+    <a href="index.html" class="logo"><img src="images/logo.png"></a>
+    <div class="busca">  <p>Busca de alumno por DNI: </p><input class="search" type="text" id="myInput" onkeyup="filtro()" placeholder="001" title="Type in a name"></div>
+    <div class="derecha"><p>Alumno: Pepeluis</p><p>Empresa: <a href="accenture.html">Accenture</a></p><p>Tutor: Francisco</p><a href="index.html"><i id="logout" class="fas fa-sign-out-alt" style="font-size:30px"></i></a></div>
+
+ 
+
+  </header>
+
+
+    <div id="wrapper">
+      <table align='center' cellspacing=2 cellpadding=5 id="data_table">
+        <tr>
+          <th>ID</th>
+          <th>Producto</th>
+          <th>Precio</th>
+          <th>Cantidad Disponible</th>
+          <th>Acciones</th>
+        </tr>
+
+        <tr id="row1">
+          <td id="id_row1">#001</td>
+          <td id="producto_row1">Pokeball</td>
+          <td id="precio_row1">$6.99</td>
+          <td id="cantidadDisponible_row1">10000</td>
+          <td>
+            <input type="button" id="edit_button1" value="📝" class="edit" onclick="edit_row('1')">
+            <input type="button" id="save_button1" value="💾" class="save" onclick="save_row('1')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('1')">
+          </td>
+        </tr>
+        <tr id="row2">
+          <td id="id_row2">#002</td>
+          <td id="producto_row2">Superball</td>
+          <td id="precio_row2">$13.99</td>
+          <td id="cantidadDisponible_row2">10000</td>
+          <td>
+            <input type="button" id="edit_button2" value="📝" class="edit" onclick="edit_row('2')">
+            <input type="button" id="save_button2" value="💾" class="save" onclick="save_row('2')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('2')">
+          </td>
+        </tr><tr id="row3">
+          <td id="id_row3">#003</td>
+          <td id="producto_row3">Ultraball</td>
+          <td id="precio_row3">$24.99</td>
+          <td id="cantidadDisponible_row3">10000</td>
+          <td>
+            <input type="button" id="edit_button3" value="📝" class="edit" onclick="edit_row('3')">
+            <input type="button" id="save_button3" value="💾" class="save" onclick="save_row('3')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('3')">
+          </td>
+        </tr>
+        <tr id="row4">
+          <td id="id_row4">#004</td>
+          <td id="producto_row4">Masterball</td>
+          <td id="precio_row4">$999.999</td>
+          <td id="cantidadDisponible_row4">1</td>
+          <td>
+            <input type="button" id="edit_button4" value="📝" class="edit" onclick="edit_row('4')">
+            <input type="button" id="save_button4" value="💾" class="save" onclick="save_row('4')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('4')">
+          </td>
+        </tr>
+        <tr id="row5">
+          <td id="id_row5">#005</td>
+          <td id="producto_row5">Pack de 3 Pokeballs</td>
+          <td id="precio_row5">$20.99</td>
+          <td id="cantidadDisponible_row5">3333</td>
+          <td>
+            <input type="button" id="edit_button5" value="📝" class="edit" onclick="edit_row('5')">
+            <input type="button" id="save_button5" value="💾" class="save" onclick="save_row('5')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('5')">
+          </td>
+        </tr>
+        <tr id="row6">
+          <td id="id_row6">#006</td>
+          <td id="producto_row6">Poción</td>
+          <td id="precio_row6">$4.99</td>
+          <td id="cantidadDisponible_row6">10000</td>
+          <td>
+            <input type="button" id="edit_button6" value="📝" class="edit" onclick="edit_row('6')">
+            <input type="button" id="save_button6" value="💾" class="save" onclick="save_row('6')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('6')">
+          </td>
+        </tr>
+        <tr id="row7">
+          <td id="id_row7">#007</td>
+          <td id="producto_row7">Superpoción</td>
+          <td id="precio_row7">$9.99</td>
+          <td id="cantidadDisponible_row7">10000</td>
+          <td>
+            <input type="button" id="edit_button7" value="📝" class="edit" onclick="edit_row('7')">
+            <input type="button" id="save_button7" value="💾" class="save" onclick="save_row('7')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('7')">
+          </td>
+        </tr>
+        <tr id="row8">
+          <td id="id_row8">#008</td>
+          <td id="producto_row8">Hiperpoción</td>
+          <td id="precio_row8">$19.99</td>
+          <td id="cantidadDisponible_row8">10000</td>
+          <td>
+            <input type="button" id="edit_button8" value="📝" class="edit" onclick="edit_row('8')">
+            <input type="button" id="save_button8" value="💾" class="save" onclick="save_row('8')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('8')">
+          </td>
+        </tr>
+        <tr id="row9">
+          <td id="id_row9">#009</td>
+          <td id="producto_row9">Revivir</td>
+          <td id="precio_row9">$29.99</td>
+          <td id="cantidadDisponible_row9">10000</td>
+          <td>
+            <input type="button" id="edit_button9" value="📝" class="edit" onclick="edit_row('9')">
+            <input type="button" id="save_button9" value="💾" class="save" onclick="save_row('9')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('9')">
+          </td>
+        </tr>
+        <tr id="row10">
+          <td id="id_row10">#010</td>
+          <td id="producto_row10">Incubadora</td>
+          <td id="precio_row10">$17.99</td>
+          <td id="cantidadDisponible_row10">50</td>
+          <td>
+            <input type="button" id="edit_button10" value="📝" class="edit" onclick="edit_row('10')">
+            <input type="button" id="save_button10" value="💾" class="save" onclick="save_row('10')">
+            <input type="button" value="🗑️" class="delete" onclick="delete_row('10')">
+          </td>
+        </tr>
+      
+        <tr>
+          <td><input type="text" id="new_id"></td>
+          <td><input type="text" id="new_producto"></td>
+          <td><input type="text" id="new_precio"></td>
+          <td><input type="text" id="new_cantidadDisponible"></td>
+          <td><input type="button" class="add" onclick="add_row();" value="➕"></td>
+       </tr>
+      </table>
+    </div>
+  </body>
+  </html>
+  <script src="./scriptadmin.js"></script>
+
+</body>
+
+</html>
