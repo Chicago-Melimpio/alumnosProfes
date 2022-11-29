@@ -43,8 +43,4 @@ function add_row() {
     document.getElementById("new_horas").value = "";
 }
 
-// function increaseNum(){
-//   document.getElementById("new_dias").value++;
-// }
-
 

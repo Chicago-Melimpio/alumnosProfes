@@ -23,6 +23,7 @@ function filtro() {
 function edit_row(no) {
   document.getElementById("edit_button" + no).style.display = "none";
   document.getElementById("save_button" + no).style.display = "inline";
+  
   var nombrehtml = document.getElementById("Nombre" + no);
   var apellidoshtml = document.getElementById("Apellidos" + no);
   var contraseñahtml = document.getElementById("Contraseña" + no);
@@ -34,6 +35,7 @@ function edit_row(no) {
   var dualhtml = document.getElementById("Dual" + no);
   var fcthtml = document.getElementById("FCT" + no);
   var obshtml = document.getElementById("Observaciones" + no);
+
   var nombre = nombrehtml.innerHTML;
   var apellidos = apellidoshtml.innerHTML;
   var contra = contraseñahtml.innerHTML;
@@ -45,6 +47,7 @@ function edit_row(no) {
   var dual = dualhtml.innerHTML;
   var fct = fcthtml.innerHTML;
   var obs = obshtml.innerHTML;
+
   nombrehtml.innerHTML = "<input type='text' id='nombre_text" + no + "' value='" + nombre + "'>";
   apellidoshtml.innerHTML = "<input type='text' id='apellidos_text" + no + "' value='" + apellidos + "'>";
   contraseñahtml.innerHTML = "<input type='text' id='contraseña_text" + no + "' value='" + contra + "'>";

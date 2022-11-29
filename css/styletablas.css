@@ -101,6 +101,7 @@ input:hover{
 }
 td{
     border-radius: 15px;
+    line-break: anywhere;
 }
 th{
     background-color: var(--pc);
