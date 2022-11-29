@@ -52,7 +52,7 @@ html {
 }
 
 body {
-  background: url(fondo.jpg);
+  background: url(../Static/fondo.jpg);
   background-size: cover;
   font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
   font-size: var(--bodyFontSize);
