@@ -23,7 +23,7 @@ function filtro() {
 function edit_row(no) {
   document.getElementById("edit_button" + no).style.display = "none";
   document.getElementById("save_button" + no).style.display = "inline";
-  
+
   var nombrehtml = document.getElementById("Nombre" + no);
   var apellidoshtml = document.getElementById("Apellidos" + no);
   var contraseñahtml = document.getElementById("Contraseña" + no);

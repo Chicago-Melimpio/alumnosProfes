@@ -28,7 +28,10 @@ html {
 }
 
 body {
-    background: url(../images/312.jpg);
+    background: url(../Static/fondoalumno.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
     background-attachment: fixed;
 }
 
