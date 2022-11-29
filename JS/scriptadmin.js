@@ -125,7 +125,7 @@ function add_row() {
   "<td><input type='button' id='edit_button" + table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'>"+
   "<input type='button' id='save_button" + table_len + "' value='💾' class='save' onclick='save_row(" + table_len + ")'>"+
   "<input type='button' value='🗑️' class='delete' onclick='delete_row(" + table_len + ")'>"+
-  "<input type='button' value='Ver alumno' class='ver'></td></tr>";
+  "<input type='button' value='🤓' class='ver'></td></tr>";
   
   document.getElementById("new_nombre").value = "";
   document.getElementById("new_apellidos").value = "";
