@@ -123,7 +123,9 @@ tr:hover{
 .add:hover{
     background-color: greenyellow;
 }
-
+.ver:hover{
+    background-color: lightcoral;
+}
 .save{
     display: none;
 }
