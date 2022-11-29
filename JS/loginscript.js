@@ -48,7 +48,7 @@ function eMail() {
         document.body.querySelector(".logalumno3").style.display = 'none';
         document.body.querySelector(".logalumno4").style.display = 'none';
         //Solo clave incorrecta
-    } else if (x.value == "manuel@alumno.com" && y.value != "alumno1") {
+    } else if (x.value == "manuel@alumno.com" && y.value != "alumno1") { 
         x1.style.display = 'none';
         x2.style.display = 'none';
         y1.style.display = 'none';
