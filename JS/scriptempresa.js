@@ -85,10 +85,10 @@ function filtro() {
     table.insertRow(table_len).outerHTML = 
     "<tr id='row" + table_len + "'>"+
     "<td id='Nombre" +table_len+"'>"+new_nombre+"</td>"+
-    "<td id='Apellidos" +table_len+"'>"+new_telefono+"</td>"+
-    "<td id='Contraseña" +table_len+"'>"+new_ubicacion+"</td>"+
-    "<td id='DNI" +table_len+"'>"+new_tutor+"</td>"+
-    "<td id='Nacimiento" +table_len+"'>"+new_logo+"</td>"+
+    "<td id='Telefono" +table_len+"'>"+new_telefono+"</td>"+
+    "<td id='Ubicacion" +table_len+"'>"+new_ubicacion+"</td>"+
+    "<td id='Tutor" +table_len+"'>"+new_tutor+"</td>"+
+    "<td id='Logo" +table_len+"'>"+new_logo+"</td>"+
 
     "<td><input type='button' id='edit_button" + table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'>"+
     "<input type='button' id='save_button" + table_len + "' value='💾' class='save' onclick='save_row(" + table_len + ")'>"+
