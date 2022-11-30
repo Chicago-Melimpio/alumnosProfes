@@ -35,7 +35,11 @@ function add_row() {
     var new_horas = document.getElementById("new_horas").value;
     var table = document.getElementById("data_table");
     var table_len = (table.rows.length) - 1;
-    var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='dias_row" + table_len + "'>" + table_len + "</td><td id='actividades_row" + table_len + "'>" + new_actividades + "</td><td id='observaciones_row" + table_len + "'>" + new_observaciones + "</td><td id='horas_row" + table_len + "'>" + new_horas +"</td><td><input type='button' id='edit_button" + table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len + "' value='📝' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>";
+    var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='dias_row" + table_len + "'>" + table_len +
+     "</td><td id='actividades_row" + table_len + "'>" + new_actividades + "</td><td id='observaciones_row" + table_len + "'>" +
+      new_observaciones + "</td><td id='horas_row" + table_len + "'>" + new_horas +"</td><td><input type='button' id='edit_button" +
+       table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+        "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>";
 
     document.getElementById("new_dias").textContent = table_len+1;
     document.getElementById("new_actividades").value = "";
