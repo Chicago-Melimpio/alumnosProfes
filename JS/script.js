@@ -61,19 +61,19 @@ var bdd = window.localStorage;
     if(window.location.href.includes("Royce")){
          nombre = "royce";
          tareasRoyce.push(actividadesObj)
-         bdd.setItem("tareaRoyce", JSON.stringify(tareasRoyce));
+         bdd.setItem("tareasRoyce", JSON.stringify(tareasRoyce));
     }else if  (window.location.href.includes("epelu")){
          nombre = "pepelu";
          tareasPepelu.push(actividadesObj)
-         bdd.setItem("tareaPepelu", JSON.stringify(tareasPepelu));
+         bdd.setItem("tareasPepelu", JSON.stringify(tareasPepelu));
     }else if (window.location.href.includes("iguel")){
          nombre = "miguel"
          tareasMiguel.push(actividadesObj)
-         bdd.setItem("tareaMiguel", JSON.stringify(tareasMiguel));
+         bdd.setItem("tareasMiguel", JSON.stringify(tareasMiguel));
     }else {
          nombre = "camilo";
          tareasCamilo.push(actividadesObj)
-         bdd.setItem("tareaCamilo", JSON.stringify(tareasCamilo));
+         bdd.setItem("tareasCamilo", JSON.stringify(tareasCamilo));
     }
         
         
@@ -166,13 +166,13 @@ fetch('./profesores.json')
 }
 
 function tareasNuevas(){
-    var tareasNuevas = JSON.parse(localStorage.getItem("tareaAlumno"));
-    console.log(tareasNuevas)
+    // var tareasNuevas = JSON.parse(localStorage.getItem("tareaAlumno"));
+    // console.log(tareasNuevas)
     
     // tareasNuevas.forEach(alumno => {
         if (window.location.href.includes("Royce")){
-            var tareasNuevas = JSON.parse(localStorage.getItem("tareasRoyce"));
-            tareasNuevas.forEach(alumno =>{
+            var tareasNuevasRoyce = JSON.parse(localStorage.getItem("tareasRoyce"));
+            tareasNuevasRoyce.forEach(alumno =>{
               
                     const fila = document.createElement("tr");
                     fila.innerHTML = 
@@ -190,50 +190,56 @@ function tareasNuevas(){
             })
             
     } else if (window.location.href.includes("Pepelu")){
-        if (alumno.nombre == "pepelu"){
-    const fila = document.createElement("tr");
-    fila.innerHTML = 
-    `<tr> 
-    <td>${document.querySelector("table").rows.length -1}</td>
-<td>${alumno.actividades}</td>
-<td>${alumno.observaciones}</td>
-<td>${alumno.horas}</td>
-
-<td><input type='button' id='edit_button" +
-table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
-"' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
-document.querySelector("#data").appendChild(fila);
-    }
+        var tareasNuevasPepelu = JSON.parse(localStorage.getItem("tareasPepelu"));
+        tareasNuevasPepelu.forEach(alumno =>{
+                const fila = document.createElement("tr");
+                fila.innerHTML = 
+                `<tr> 
+                <td>${document.querySelector("table").rows.length -1}</td>
+            <td>${alumno.actividades}</td>
+            <td>${alumno.observaciones}</td>
+            <td>${alumno.horas}</td>
+            
+            <td><input type='button' id='edit_button" +
+            table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+            "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
+            document.querySelector("#data").appendChild(fila);
+                
+        })
 } else if (window.location.href.includes("Miguel")){
-    if (alumno.nombre == "miguel"){
-const fila = document.createElement("tr");
-fila.innerHTML = 
-`<tr> 
-<td>${document.querySelector("table").rows.length -1}</td>
-<td>${alumno.actividades}</td>
-<td>${alumno.observaciones}</td>
-<td>${alumno.horas}</td>
-
-<td><input type='button' id='edit_button" +
-table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
-"' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
-document.querySelector("#data").appendChild(fila);
-}
+    var tareasNuevasMiguel = JSON.parse(localStorage.getItem("tareasMiguel"));
+        tareasNuevasMiguel.forEach(alumno =>{
+                const fila = document.createElement("tr");
+                fila.innerHTML = 
+                `<tr> 
+                <td>${document.querySelector("table").rows.length -1}</td>
+            <td>${alumno.actividades}</td>
+            <td>${alumno.observaciones}</td>
+            <td>${alumno.horas}</td>
+            
+            <td><input type='button' id='edit_button" +
+            table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+            "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
+            document.querySelector("#data").appendChild(fila);
+                
+        })
 } else if (window.location.href.includes("Camilo")){
-    if (alumno.nombre == "camilo"){
-const fila = document.createElement("tr");
-fila.innerHTML = 
-`<tr> 
-<td>${document.querySelector("table").rows.length -1}</td>
-<td>${alumno.actividades}</td>
-<td>${alumno.observaciones}</td>
-<td>${alumno.horas}</td>
-
-<td><input type='button' id='edit_button" +
-table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
-"' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
-document.querySelector("#data").appendChild(fila);
-}
+    var tareasNuevasCamilo = JSON.parse(localStorage.getItem("tareasCamilo"));
+    tareasNuevasCamilo.forEach(alumno =>{
+                const fila = document.createElement("tr");
+                fila.innerHTML = 
+                `<tr> 
+                <td>${document.querySelector("table").rows.length -1}</td>
+            <td>${alumno.actividades}</td>
+            <td>${alumno.observaciones}</td>
+            <td>${alumno.horas}</td>
+            
+            <td><input type='button' id='edit_button" +
+            table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+            "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
+            document.querySelector("#data").appendChild(fila);
+                
+        })
 }
     // })
 
