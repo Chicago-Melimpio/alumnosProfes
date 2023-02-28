@@ -23,6 +23,7 @@
 
   <div id="wrapper">
     <table cellspacing=2 cellpadding=5 id="data_table" >
+     <tbody id="data">
       <tr>
         <th>Día</th>
         <th>Actividades</th>
@@ -30,8 +31,9 @@
         <th>Horas</th>
         <th>Acciones</th>
       </tr>
-
-      <tr id="row1">
+     </tbody>
+    
+      <!-- <tr id="row1">
         <td id="dias_row1">1</td>
         <td id="actividades_row1">Trabajar</td>
         <td id="observaciones_row1">Gratis</td>
@@ -40,14 +42,16 @@
           <input type="button" id="edit_button1" value="📝" class="edit" onclick="edit_row('1')">
           <input type="button" id="save_button1" value="💾" class="save" onclick="save_row('1')" style="display:none">
         </td>
-      </tr>
-      <tr>
-        <td id="new_dias">2</td>
-        <td><input type="text" id="new_actividades"></td>
-        <td><input type="text" id="new_observaciones"></td>
-        <td><input type="text" id="new_horas"></td>
-        <td><input type="button" class="add" onclick="add_row();" value="➕"></td>
-     </tr>
+      </tr> -->
+      <tfoot>
+        <tr>
+          <td id="new_dias"></td>
+          <td><input type="text" id="new_actividades"></td>
+          <td><input type="text" id="new_observaciones"></td>
+          <td><input type="text" id="new_horas"></td>
+          <td><input type="button" class="add" onclick="add_row();" value="➕"></td>
+       </tr>
+      </tfoot>
 
   
 

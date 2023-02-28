@@ -1,0 +1,78 @@
+{
+    "profesores": [
+        {
+            "nombre": "Aaron",
+            "alumnos": [
+                {
+                    "nombre": "Miguel",
+                    "apellidos": "Sanchez",
+                    "contraseña": "alumno4",
+                    "dni": "123456789",
+                    "nacimiento": "1/1/1111",
+                    "email": "miguel@alumno,com",
+                    "telefono": "123445",
+                    "empresa": "torsa",
+                    "dual": "30",
+                    "fct": "0",
+                    "observacionesp": "venmga",
+                    "actividades": "soy marica",
+                    "observacionesa": "jajajejeje",
+                    "horas": "24"
+                },
+                {
+                    "nombre": "Camisa",
+                    "apellidos": "Sanchez",
+                    "contraseña": "alumno3",
+                    "dni": "123456789",
+                    "nacimiento": "2/1/1111",
+                    "email": "miguel@alumno,com",
+                    "telefono": "123445",
+                    "empresa": "sipadam",
+                    "dual": "31",
+                    "fct": "0",
+                    "observacionesp": "niguna",
+                    "actividades": "trabajar",
+                    "observacionesa": "gratis",
+                    "horas": "24"
+                }
+            ]
+        },
+        {
+            "nombre": "Francisco",
+            "alumnos": [
+                {
+                    "nombre": "Manu",
+                    "apellidos": "Royce",
+                    "contraseña": "alumno1",
+                    "dni": "123456789",
+                    "nacimiento": "1/1/1111",
+                    "email": "manuel@alumno,com",
+                    "telefono": "123445",
+                    "empresa": "nttdata",
+                    "dual": "30",
+                    "fct": "0",
+                    "observacionesp": "niguna",
+                    "actividades": "trabajar",
+                    "observacionesa": "gratis",
+                    "horas": "24"
+                },
+                {
+                    "nombre": "Juan",
+                    "apellidos": "Pe",
+                    "contraseña": "alumno2",
+                    "dni": "123456789",
+                    "nacimiento": "2/1/1111",
+                    "email": "pepelu@alumno,com",
+                    "telefono": "123445",
+                    "empresa": "accenture",
+                    "dual": "31",
+                    "fct": "0",
+                    "observacionesp": "niguna",
+                    "actividades": "trabajar",
+                    "observacionesa": "gratis",
+                    "horas": "24"
+                }
+            ]
+        }
+    ]
+}

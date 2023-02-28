@@ -14,9 +14,36 @@
                     "empresa": "torsa",
                     "dual": "30",
                     "fct": "0",
-                    "observacionesp": "niguna",
-                    "actividades": "trabajar",
-                    "observacionesa": "gratis",
+                    "observacionesp":[
+                        {
+                           
+                            "valor": "venmga"
+                        },
+                        {
+                            
+                            "valor": "soy marica"
+                        }
+                    ],
+                    "actividades": [
+                        {
+                           
+                            "valor": "hice esto1"
+                        },
+                        {
+                            
+                            "valor": "hice lo otro2"
+                        }
+                    ],
+                    "observacionesa": [
+                        {
+                           
+                            "valor": "voy todo loco1"
+                        },
+                        {
+                            
+                            "valor": "joderjoder2"
+                        }
+                    ],
                     "horas": "24"
                 },
                 {
@@ -30,9 +57,36 @@
                     "empresa": "sipadam",
                     "dual": "31",
                     "fct": "0",
-                    "observacionesp": "niguna",
-                    "actividades": "trabajar",
-                    "observacionesa": "gratis",
+                    "observacionesp": [
+                        {
+                           
+                            "valor": "soy camilo 1"
+                        },
+                        {
+                            
+                            "valor": "soy el mas niga"
+                        }
+                    ],
+                    "actividades": [
+                        {
+                           
+                            "valor": "soy camilo 2"
+                        },
+                        {
+                            
+                            "valor": "i am a pussy ass bi"
+                        }
+                    ],
+                    "observacionesa": [
+                        {
+                           
+                            "valor": "joderjoder1"
+                        },
+                        {
+                            
+                            "valor": "joderjoder69"
+                        }
+                    ],
                     "horas": "24"
                 }
             ]
@@ -51,9 +105,36 @@
                     "empresa": "nttdata",
                     "dual": "30",
                     "fct": "0",
-                    "observacionesp": "niguna",
-                    "actividades": "trabajar",
-                    "observacionesa": "gratis",
+                    "observacionesp": [
+                        {
+                           
+                            "valor": "soy manu1"
+                        },
+                        {
+                            
+                            "valor": "soy manu2"
+                        }
+                    ],
+                    "actividades":  [
+                        {
+                           
+                            "valor": "soy manuel2 2"
+                        },
+                        {
+                            
+                            "valor": "i am a manu ass bi"
+                        }
+                    ],
+                    "observacionesa": [
+                        {
+                           
+                            "valor": "MANU"
+                        },
+                        {
+                            
+                            "valor": "ROYCE"
+                        }
+                    ],
                     "horas": "24"
                 },
                 {
@@ -67,9 +148,36 @@
                     "empresa": "accenture",
                     "dual": "31",
                     "fct": "0",
-                    "observacionesp": "niguna",
-                    "actividades": "trabajar",
-                    "observacionesa": "gratis",
+                    "observacionesp": [
+                        {
+                           
+                            "valor": "soy manumarc1"
+                        },
+                        {
+                            
+                            "valor": "soy maricon"
+                        }
+                    ],
+                    "actividades": [
+                        {
+                           
+                            "valor": "yono"
+                        },
+                        {
+                            
+                            "valor": "trabajo"
+                        }
+                    ],
+                    "observacionesa": [
+                        {
+                           
+                            "valor": "PEPE"
+                        },
+                        {
+                            
+                            "valor": "LU"
+                        }
+                    ],
                     "horas": "24"
                 }
             ]

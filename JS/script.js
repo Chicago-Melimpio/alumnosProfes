@@ -1,3 +1,5 @@
+document.querySelector("#new_dias").innerHTML = document.querySelector("table").rows.length +1;
+
 function edit_row(no) {
     document.getElementById("edit_button" + no).style.display = "none";
     document.getElementById("save_button" + no).style.display = "inline";
@@ -48,9 +50,106 @@ function add_row() {
 }
 
 
+// fetch('./profesores.json')
+//   .then(response => response.json())
+//   .then(data => {
+//     data = jeison;
+//     jeison.forEach(profesor =>{
+//         console.log(profesor)
+//     })
+    
+//   });
 
+// document.querySelector("table").rows.length
+// var data = document.querySelector("#data")
+// fetch('./profesores.json')
+//   .then(response => response.json())
+//   .then(data => {
+//     data.profesores.forEach(profesor =>{
+//         console.log(profesor)
+//         if (profesor.nombre == "Aaron")
+//         profesor.alumnos.forEach(alumno =>{
+//             console.log(alumno.nombre)
+//             const row = document.createElement("tr");
+//             row.innerHTML = `<tr> 
+//             <td>${document.querySelector("table").rows.length -1}</td>
+//             <td>${alumno.actividades[0].valor}</td>
+//             <td>${alumno.observacionesa[0].valor}</td>
+//             <td>${alumno.horas}</td>
+//             <td><input type='button' id='edit_button" +
+//        table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+//         "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
+//       document.querySelector('#data').appendChild(row);
+//         })
+//     })
+//   });
+document.querySelector("table").rows.length
+var data = document.querySelector("#data")
+fetch('./profesores.json')
+  .then(response => response.json())
+  .then(data => {
+    data.profesores.forEach(profesor =>{
+        console.log(profesor)
+        if (profesor.nombre == "Aaron"){
+        
+            if (window.location.href.includes("Miguel")){
+               for (i = 0; i <= profesor.alumnos[0].actividades.length; i++){
+                const row = document.createElement("tr");
+                row.innerHTML = `<tr> 
+                <td>${document.querySelector("table").rows.length -1}</td>
+                <td>${profesor.alumnos[0].actividades[i].valor}</td>
+                <td>${profesor.alumnos[0].observacionesa[i].valor}</td>
+                <td>${profesor.alumnos[0].horas}</td>
+                <td><input type='button' id='edit_button" +
+           table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+            "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
+          document.querySelector('#data').appendChild(row);
+               }
+            }else if (window.location.href.includes("Camilo")){
+                for (i = 0; i <= profesor.alumnos[1].actividades.length; i++){
+                    const row = document.createElement("tr");
+                    row.innerHTML = `<tr> 
+                    <td>${document.querySelector("table").rows.length -1}</td>
+                    <td>${profesor.alumnos[1].actividades[i].valor}</td>
+                    <td>${profesor.alumnos[1].observacionesa[i].valor}</td>
+                    <td>${profesor.alumnos[1].horas}</td>
+                    <td><input type='button' id='edit_button" +
+               table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+                "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
+              document.querySelector('#data').appendChild(row);
+                   }
+            }
+        }else{
+            if (window.location.href.includes("alRoyce")){
+                for (i = 0; i <= profesor.alumnos[0].actividades.length; i++){
+                 const row = document.createElement("tr");
+                 row.innerHTML = `<tr> 
+                 <td>${document.querySelector("table").rows.length -1}</td>
+                 <td>${profesor.alumnos[0].actividades[i].valor}</td>
+                 <td>${profesor.alumnos[0].observacionesa[i].valor}</td>
+                 <td>${profesor.alumnos[0].horas}</td>
+                 <td><input type='button' id='edit_button" +
+            table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+             "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
+           document.querySelector('#data').appendChild(row);
+                }
+             }else if (window.location.href.includes("Pepelu")) {
+                 for (i = 0; i <= profesor.alumnos[1].actividades.length; i++){
+                     const row = document.createElement("tr");
+                     row.innerHTML = `<tr> 
+                     <td>${document.querySelector("table").rows.length -1}</td>
+                     <td>${profesor.alumnos[1].actividades[i].valor}</td>
+                     <td>${profesor.alumnos[1].observacionesa[i].valor}</td>
+                     <td>${profesor.alumnos[1].horas}</td>
+                     <td><input type='button' id='edit_button" +
+                table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+                 "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
+               document.querySelector('#data').appendChild(row);
+                    }
+             }
+        }
+    })
+  });
 
-
-
-
+console.log(window.location.href)
 
