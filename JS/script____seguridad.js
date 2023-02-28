@@ -29,10 +29,7 @@ function save_row(no) {
     document.getElementById("save_button" + no).style.display = "none";
 }
 
-tareasCamilo = [];
-tareasMiguel = [];
-tareasRoyce = [];
-tareasPepelu = [];
+tareas = [];
 function add_row() {
     var new_dias = document.getElementById("new_dias").value;
     var new_actividades = document.getElementById("new_actividades").value;
@@ -50,36 +47,26 @@ function add_row() {
     document.getElementById("new_actividades").value = "";
     document.getElementById("new_observaciones").value = "";
     document.getElementById("new_horas").value = "";
-    actividadesObj = {
-    actividades : new_actividades,
-    observaciones : new_observaciones,
-    horas : new_horas,
-    nombre : nombre
-}
-var bdd = window.localStorage;
     var nombre;
     if(window.location.href.includes("Royce")){
          nombre = "royce";
-         tareasRoyce.push(actividadesObj)
-         bdd.setItem("tareaRoyce", JSON.stringify(tareasRoyce));
     }else if  (window.location.href.includes("epelu")){
          nombre = "pepelu";
-         tareasPepelu.push(actividadesObj)
-         bdd.setItem("tareaPepelu", JSON.stringify(tareasPepelu));
     }else if (window.location.href.includes("iguel")){
          nombre = "miguel"
-         tareasMiguel.push(actividadesObj)
-         bdd.setItem("tareaMiguel", JSON.stringify(tareasMiguel));
     }else {
          nombre = "camilo";
-         tareasCamilo.push(actividadesObj)
-         bdd.setItem("tareaCamilo", JSON.stringify(tareasCamilo));
     }
+        actividadesObj = {
+            actividades : new_actividades,
+            observaciones : new_observaciones,
+            horas : new_horas,
+            nombre : nombre
+        }
+        var bdd = window.localStorage;
         
-        
-        
-        // tareas.push(actividadesObj)
-        // bdd.setItem("tareaAlumno", JSON.stringify(tareas));
+        tareas.push(actividadesObj)
+        bdd.setItem("tareaAlumno", JSON.stringify(tareas));
 
 
 }
@@ -97,6 +84,8 @@ fetch('./profesores.json')
 
     // -----------------------------------------------------------------
  
+
+    
 
 
     // -----------------------------------------------------------------
@@ -169,26 +158,22 @@ function tareasNuevas(){
     var tareasNuevas = JSON.parse(localStorage.getItem("tareaAlumno"));
     console.log(tareasNuevas)
     
-    // tareasNuevas.forEach(alumno => {
+    tareasNuevas.forEach(alumno => {
         if (window.location.href.includes("Royce")){
-            var tareasNuevas = JSON.parse(localStorage.getItem("tareasRoyce"));
-            tareasNuevas.forEach(alumno =>{
-              
-                    const fila = document.createElement("tr");
-                    fila.innerHTML = 
-                    `<tr> 
-                    <td>${document.querySelector("table").rows.length -1}</td>
-                <td>${alumno.actividades}</td>
-                <td>${alumno.observaciones}</td>
-                <td>${alumno.horas}</td>
-                
-                <td><input type='button' id='edit_button" +
-                table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
-                "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
-                document.querySelector("#data").appendChild(fila);
-                    
-            })
-            
+            if (alumno.nombre == "royce"){
+        const fila = document.createElement("tr");
+        fila.innerHTML = 
+        `<tr> 
+        <td>${document.querySelector("table").rows.length -1}</td>
+    <td>${alumno.actividades}</td>
+    <td>${alumno.observaciones}</td>
+    <td>${alumno.horas}</td>
+    
+    <td><input type='button' id='edit_button" +
+    table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
+    "' value='💾' class='save' onclick='save_row(" + table_len + ")' style='display:none' > </tr>`
+    document.querySelector("#data").appendChild(fila);
+        }
     } else if (window.location.href.includes("Pepelu")){
         if (alumno.nombre == "pepelu"){
     const fila = document.createElement("tr");
@@ -235,7 +220,7 @@ table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> 
 document.querySelector("#data").appendChild(fila);
 }
 }
-    // })
+    })
 
 }
 function inicializar() {
