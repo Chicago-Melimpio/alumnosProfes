@@ -47,6 +47,26 @@ function add_row() {
     document.getElementById("new_actividades").value = "";
     document.getElementById("new_observaciones").value = "";
     document.getElementById("new_horas").value = "";
+        actividadesObj = {
+            valor : new_actividades
+        }
+        observacionesObj = {
+            valor : new_observaciones
+        }
+        fetch('./profesores.json')
+  .then(response => response.json())
+  .then(data => {
+    data.forEach(profesor =>{
+        console.log(profesor)
+        if (profesor.nombre == "Aaron"){
+            if (window.location.href.includes("Miguel")){
+                profesor.alumno[0].actividades.push(actividadesObj);
+                profesor.alumno[0].observaciones.push(observacionesObj);
+            }
+        }
+    })
+    
+  });
 }
 
 
@@ -151,5 +171,4 @@ fetch('./profesores.json')
     })
   });
 
-console.log(window.location.href)
 
