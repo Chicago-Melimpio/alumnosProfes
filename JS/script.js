@@ -38,6 +38,12 @@ function add_row() {
     var new_actividades = document.getElementById("new_actividades").value;
     var new_observaciones = document.getElementById("new_observaciones").value;
     var new_horas = document.getElementById("new_horas").value;
+    
+    if (new_actividades.trim() === "" || new_observaciones.trim() === "" || new_horas.trim() === "") {
+        alert("Rellena todos los campos antes de guardar");
+        return;
+    }
+
     var table = document.getElementById("data_table");
     var table_len = (table.rows.length) - 1;
     var row = table.insertRow(table_len).outerHTML = "<tr id='row" + table_len + "'><td id='dias_row" + table_len + "'>" + table_len +
@@ -172,15 +178,15 @@ function tareasNuevas(){
     // tareasNuevas.forEach(alumno => {
         if (window.location.href.includes("Royce")){
             var tareasNuevasRoyce = JSON.parse(localStorage.getItem("tareasRoyce"));
-            tareasNuevasRoyce.forEach(alumno =>{
+            tareasNuevasRoyce.forEach(dia =>{
               
                     const fila = document.createElement("tr");
                     fila.innerHTML = 
                     `<tr> 
                     <td>${document.querySelector("table").rows.length -1}</td>
-                <td>${alumno.actividades}</td>
-                <td>${alumno.observaciones}</td>
-                <td>${alumno.horas}</td>
+                <td>${dia.actividades}</td>
+                <td>${dia.observaciones}</td>
+                <td>${dia.horas}</td>
                 
                 <td><input type='button' id='edit_button" +
                 table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
@@ -191,14 +197,14 @@ function tareasNuevas(){
             
     } else if (window.location.href.includes("Pepelu")){
         var tareasNuevasPepelu = JSON.parse(localStorage.getItem("tareasPepelu"));
-        tareasNuevasPepelu.forEach(alumno =>{
+        tareasNuevasPepelu.forEach(dia =>{
                 const fila = document.createElement("tr");
                 fila.innerHTML = 
                 `<tr> 
                 <td>${document.querySelector("table").rows.length -1}</td>
-            <td>${alumno.actividades}</td>
-            <td>${alumno.observaciones}</td>
-            <td>${alumno.horas}</td>
+            <td>${dia.actividades}</td>
+            <td>${dia.observaciones}</td>
+            <td>${dia.horas}</td>
             
             <td><input type='button' id='edit_button" +
             table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
@@ -208,14 +214,14 @@ function tareasNuevas(){
         })
 } else if (window.location.href.includes("Miguel")){
     var tareasNuevasMiguel = JSON.parse(localStorage.getItem("tareasMiguel"));
-        tareasNuevasMiguel.forEach(alumno =>{
+        tareasNuevasMiguel.forEach(dia =>{
                 const fila = document.createElement("tr");
                 fila.innerHTML = 
                 `<tr> 
                 <td>${document.querySelector("table").rows.length -1}</td>
-            <td>${alumno.actividades}</td>
-            <td>${alumno.observaciones}</td>
-            <td>${alumno.horas}</td>
+            <td>${dia.actividades}</td>
+            <td>${dia.observaciones}</td>
+            <td>${dia.horas}</td>
             
             <td><input type='button' id='edit_button" +
             table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
@@ -225,14 +231,14 @@ function tareasNuevas(){
         })
 } else if (window.location.href.includes("Camilo")){
     var tareasNuevasCamilo = JSON.parse(localStorage.getItem("tareasCamilo"));
-    tareasNuevasCamilo.forEach(alumno =>{
+    tareasNuevasCamilo.forEach(dia =>{
                 const fila = document.createElement("tr");
                 fila.innerHTML = 
                 `<tr> 
                 <td>${document.querySelector("table").rows.length -1}</td>
-            <td>${alumno.actividades}</td>
-            <td>${alumno.observaciones}</td>
-            <td>${alumno.horas}</td>
+            <td>${dia.actividades}</td>
+            <td>${dia.observaciones}</td>
+            <td>${dia.horas}</td>
             
             <td><input type='button' id='edit_button" +
             table_len + "' value='📝' class='edit' onclick='edit_row(" + table_len + ")'> <input type='button' id='save_button" + table_len +
