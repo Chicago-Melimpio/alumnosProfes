@@ -97,7 +97,7 @@ var bdd = window.localStorage;
 function cargarJson(){
     document.querySelector("table").rows.length
 var data = document.querySelector("#data")
-fetch('./profesores.json')
+fetch('https://raw.githubusercontent.com/Chicago-Melimpio/alumnosProfes/main/profesores.json')
   .then(response => response.json())
   .then(data => {
 
