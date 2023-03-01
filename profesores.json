@@ -14,16 +14,7 @@
                     "empresa": "torsa",
                     "dual": "30",
                     "fct": "0",
-                    "observacionesp":[
-                        {
-                           
-                            "valor": "gratis"
-                        },
-                        {
-                            
-                            "valor": "más gratis"
-                        }
-                    ],
+                    "observacionesp": "gratis",
                     "actividades": [
                         {
                            
@@ -57,16 +48,7 @@
                     "empresa": "sipadam",
                     "dual": "31",
                     "fct": "0",
-                    "observacionesp": [
-                        {
-                           
-                            "valor": "gratis by camilo"
-                        },
-                        {
-                            
-                            "valor": "camilo lo hace gratis++"
-                        }
-                    ],
+                    "observacionesp": "gratis",
                     "actividades": [
                         {
                            
@@ -105,16 +87,7 @@
                     "empresa": "nttdata",
                     "dual": "30",
                     "fct": "0",
-                    "observacionesp": [
-                        {
-                           
-                            "valor": "Manu en NTT"
-                        },
-                        {
-                            
-                            "valor": "NTT 50 al mes"
-                        }
-                    ],
+                    "observacionesp": "gratis",
                     "actividades":  [
                         {
                            
@@ -148,16 +121,7 @@
                     "empresa": "accenture",
                     "dual": "31",
                     "fct": "0",
-                    "observacionesp": [
-                        {
-                           
-                            "valor": "Accenture es goooood"
-                        },
-                        {
-                            
-                            "valor": "Vamos chilling"
-                        }
-                    ],
+                    "observacionesp": "gratis",
                     "actividades": [
                         {
                            
