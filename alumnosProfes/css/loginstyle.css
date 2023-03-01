@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 .align {
   display: grid;
   place-items: center;
@@ -158,6 +159,167 @@ input[type='button'] {
 p {
   display: none;
   color: red;
+=======
+.align {
+  display: grid;
+  place-items: center;
+}
+
+:root {
+  --gridMaxWidth: 30rem;
+  --gridWidth: 90%;
+  --anchorColor: inherit;
+  --anchorHoverColor: #174689;
+  --loginBorderRadius: 0.25em;
+  --loginHeaderBackgroundColor: #174689;
+  --bodyBackgroundColor: #eaeaea;
+  --bodyColor: #999;
+  --bodyFontFamily: 'Helvetica', 'Arial';
+  --bodyFontFamilyFallback: sans-serif;
+  --bodyFontSize: 0.875rem;
+  --bodyFontWeight: 400;
+  --bodyLineHeight: 1.5;
+  --loginInputBorderRadius: 0.25em;
+}
+
+.grid {
+  inline-size: var(--gridWidth);
+  margin-inline: auto;
+  max-inline-size: var(--gridMaxWidth);
+}
+
+.icon {
+  block-size: 1.25em;
+  display: inline-block;
+  inline-size: 1.25em;
+  line-height: 1.25em;
+  margin-right: 0.625em;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.icon--info {
+  background-color: #e5e5e5;
+  border-radius: 50%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  background: url(../Static/fondo.jpg);
+  background-size: cover;
+  font-family: var(--bodyFontFamily), var(--bodyFontFamilyFallback);
+  font-size: var(--bodyFontSize);
+  font-weight: var(--bodyFontWeight);
+  line-height: var(--bodyLineHeight);
+  margin: 0;
+  min-block-size: 100vh;
+}
+
+a {
+  color: var(--anchorColor);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: var(--anchorHoverColor);
+}
+
+input[type='button'] {
+  cursor: pointer;
+}
+
+.form input[type='email'],
+.form input[type='password'] {
+  inline-size: 100%;
+}
+
+.login__header {
+  background-color: var(--loginHeaderBackgroundColor);
+  border-top-left-radius: var(--loginBorderRadius);
+  border-top-right-radius: var(--loginBorderRadius);
+  color: #fff;
+  padding: 1.5em;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.login__title {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.login__body {
+  background-color: #fff;
+  padding: 1.5em;
+  position: relative;
+}
+
+.login__body::before {
+  background-color: #fff;
+  content: '';
+  height: 0.5em;
+  left: 50%;
+  margin-left: -0.25em;
+  margin-top: -0.25em;
+  position: absolute;
+  top: 0;
+  transform: rotate(45deg);
+  width: 0.5em;
+}
+
+.login input[type='email'],
+.login input[type='password'] {
+  border: 0.0625em solid #e5e5e5;
+  padding: 1em 1.25em;
+}
+
+.login input[type='email'] {
+  margin-top: 1rem;
+  border-top-left-radius: var(--loginInputBorderRadius);
+  border-top-right-radius: var(--loginInputBorderRadius);
+}
+
+.login input[type='password'] {
+  border-bottom-left-radius: var(--loginInputBorderRadius);
+  border-bottom-right-radius: var(--loginInputBorderRadius);
+  border-top: 0;
+  margin-bottom: 1rem;
+}
+
+.login input[type='button'] {
+  display: none;
+  background-color: #174689;
+  border-radius: var(--loginInputBorderRadius);
+  color: #fff;
+  font-weight: 700;
+  order: 1;
+  padding: 0.75em 1.25em;
+  transition: background-color 0.3s;
+}
+
+.login input[type='button']:focus,
+.login input[type='button']:hover {
+  background-color: #198d98;
+}
+
+.container {
+  display: flex;
+}
+
+p {
+  display: none;
+  color: red;
+>>>>>>> 7c9e2d14699533a2b4a0d5123f6a473b088cb471
 =======
 .align {
   display: grid;
